@@ -7,7 +7,7 @@
 int main() 
 {
     int packets[5], i, j, clk, b_size, o_rate, p_sz_rm = 0, p_sz, p_time; 
-    system("clear");
+    //system("clear");
 
     for(i=0;i<5;i++)
     {

@@ -22,13 +22,13 @@ int main(int argc,char **argv)
 
     bind(sockfd,(struct sockaddr*) &serv_addr, sizeof(serv_addr));
     listen(sockfd,5);
-
     printf("server waiting for client\n");
     clienlen = sizeof(clin_addr);
+
     newsockfd = accept(sockfd,(struct sockaddr *)&serv_addr, &clienlen);
-    
     bzero(filename,256); 
     read(newsockfd, filename, 255);
+    
     fd = open(filename, O_RDONLY, 0); 
     read(fd, c, 1999); 
     send(newsockfd, c, 1999, 0); 

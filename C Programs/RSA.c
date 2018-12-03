@@ -27,7 +27,7 @@ int gcd(int m,int n)    //Highest common factor of m and n
 int main() 
 {
     int p = 31, q = 17, n, e, phi, d, i, j;
-    char data[20]=" ";
+    char data[20];
     int cipherData[20]={0}, decrData[20];
 
     n = p * q;
