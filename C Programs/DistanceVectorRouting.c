@@ -14,7 +14,7 @@ void intialize(int n)
     for(i = 0; i < n; i++)
         for(j = 0; j < n; j++)
         {
-            nodes[i].outgoing[j] = j;
+            nodes[i].outgoing[j] = 1;
             if(i == j)
                 nodes[i].dist[j] = 0;
             else
@@ -31,7 +31,7 @@ void floyd(int n)
             for(j = 0; j < n; j++)
                 if(nodes[i].dist[j] > nodes[i].dist[k] + nodes[k].dist[j])
                 {
-                    nodes[i].outgoing[j] = k;
+                    nodes[i].outgoing[j] += 1;
                     nodes[i].dist[j] = nodes[i].dist[k] + nodes[k].dist[j];
                 }
 }
