@@ -17,11 +17,12 @@ int main()
     mknod(fifo2,S_IFIFO |0777,0);
 
     printf("server online\n"); 
-    fd1=open(fifo1,O_RDONLY);
+    fd1 = open(fifo1,O_RDONLY);
 
     printf("waiting for request\n");
-    while((num=read(fd1,filename,100))<0); 
+    while((num = read(fd1,filename,100)) < 0); 
     filename[num]='\0';
+
     printf("%s\n",filename); 
     fd=open(filename,O_RDONLY,0);
     read(fd,c,1999); 

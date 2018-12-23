@@ -60,7 +60,7 @@ int main()
     //Encryption at server with Public key (n, e)
     for(i = 0; i < strlen(data); i++) 
     {
-        cipherData[i] = mod_exp(data[i], e, n);
+        cipherData[i] = mod_exp(data[i], e,  n);
         printf("%c = %d\n", data[i], cipherData[i]); 
     }
 

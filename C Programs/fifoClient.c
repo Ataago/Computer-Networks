@@ -22,11 +22,8 @@ int main()
     printf("enter file name\n");
     scanf("%s", filename);
 
-    printf("Filname Entered");
     write(fd1,filename,100);
-    printf("write done");
     fd2=open(fifo2,O_RDONLY);
-    printf("open done");
 
     while((num=read(fd2,c,1999))<0);
     printf("%s",c);
